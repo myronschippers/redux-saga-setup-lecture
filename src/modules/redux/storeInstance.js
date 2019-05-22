@@ -19,4 +19,4 @@ const storeInstance = createStore(
 
 sagaMiddleware.run(watcherSaga);
 
-export default storeInstance
+export default storeInstance;
