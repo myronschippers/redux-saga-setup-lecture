@@ -1,4 +1,4 @@
-# redux-saga-starter
+# redux-saga-setup
 `npm install`
 
 This is the starting repo to accompany 06-03c-redux-saga-setup.md
