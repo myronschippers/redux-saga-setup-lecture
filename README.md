@@ -12,4 +12,12 @@ This is using just React-Redux as written. Lecture converts it to use Redux-Saga
 
 Point of lecture is to show setup of redux-saga.
 
+## Getting Started with Redux Saga
+
+First install redux-saga dependency.
+
+`npm install redux-saga --save`
+
+Open your `./src/modules/redux/storeInstance.js` and import.
+
 

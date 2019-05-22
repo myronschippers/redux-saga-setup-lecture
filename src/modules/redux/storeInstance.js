@@ -1,6 +1,10 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import * as allReducers from './reducers/all.reducers';
+import createSagaMiddleware from 'redux-saga';
+import watcherSaga from './sagas/watcherSaga';
+
+const sagaMiddleware = createSagaMiddleware();
 
 // This is creating the store
 // the store is the big JavaScript Object that holds all of the information for our application
@@ -10,7 +14,9 @@ const storeInstance = createStore(
     combineReducers({
         ...allReducers
     }),
-    applyMiddleware(logger),
+    applyMiddleware(sagaMiddleware, logger),
 );
+
+sagaMiddleware.run(watcherSaga);
 
 export default storeInstance
